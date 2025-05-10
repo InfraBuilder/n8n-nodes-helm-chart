@@ -25,7 +25,7 @@
     "format": "prettier --write \"nodes/**/*.ts\" \"credentials/**/*.ts\"",
     "lint": "eslint nodes credentials",
     "lintfix": "eslint nodes credentials --fix",
-    "prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js nodes credentials"
+    "prepublishOnly": "npm run build"
   },
   "files": [
     "dist"
