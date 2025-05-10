@@ -2,6 +2,12 @@
 
 This is an n8n community node that provides functionality to interact with Helm charts from both HTTP and OCI repositories. It allows you to retrieve chart metadata and default values, making it easy to integrate Helm chart information into your n8n workflows.
 
+> **Created with Replit:** This package was developed using [Replit](https://replit.com), a collaborative browser-based development environment.
+
+## Disclaimer
+
+**USE AT YOUR OWN RISK:** This package is provided as-is without any warranties or guarantees. The author(s) are not responsible for any consequences, damages, or losses that may result from using this software in production environments. Always thoroughly test in a controlled environment before deploying to production systems.
+
 ![N8N Helm Chart Node](https://raw.githubusercontent.com/yourusername/n8n-nodes-helm-chart/main/docs/helm-chart-node.png)
 
 ## Features
@@ -135,3 +141,9 @@ Contributions are welcome! Feel free to submit a pull request with new features,
 
 - This node was created to simplify the integration of Helm chart information into n8n workflows
 - Inspired by the need to automate tasks related to Kubernetes and Helm in DevOps pipelines
+
+## Legal
+
+This package is not officially associated with or endorsed by n8n, Helm, or any of the repositories it may connect to. All product names, logos, and brands are property of their respective owners.
+
+The author(s) of this package assume no liability for any issues that may arise from its use. By using this package, you agree to the terms of the MIT License and acknowledge that you are using it at your own risk.
