@@ -1,0 +1,37 @@
+version: '3'
+
+tasks:
+  build:
+    desc: Build the package
+    cmds:
+      - npm run build
+
+  lint:
+    desc: Run linter
+    cmds:
+      - npm run lint
+
+  prepare-publish:
+    desc: Prepare the package for publishing
+    cmds:
+      - task: build
+      - echo "Ready to publish. Run 'npm publish' to publish to npm."
+
+  test-package:
+    desc: Test package locally without publishing
+    cmds:
+      - task: build
+      - cd dist && npm pack
+      - echo "Package created in dist folder. You can install it locally with npm install <path-to-tarball>"
+
+  update-version:
+    desc: Update package version
+    vars:
+      VERSION: '{{.CLI_ARGS}}'
+    cmds:
+      - |
+        if [ -z "{{.VERSION}}" ]; then
+          echo "Please provide a version argument: task update-version -- 1.0.0"
+          exit 1
+        fi
+      - npm version {{.VERSION}} --no-git-tag-version
